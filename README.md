@@ -5,7 +5,8 @@
         1. https://en.wikipedia.org/wiki/Facade_pattern
         2. https://en.wikipedia.org/wiki/Mediator_pattern
     2. The PFAAO design pattern
-    3. Value Object design pattern
+        1. https://kellysutton.com/2017/09/13/embracing-functional-programming-in-ruby.html
+    4. Value Object design pattern
         1. Strings are flying like saucers in our codebase. While this can be a breathtaking view in real life, it is pure madness in a codebase. Things can get hairy. In some places people can decide to use downcased representations of a String, in other places the upcased ones. Who’s to blame? What if we need some behaviour attached to that entity too? Patching String is crazy. https://revs.runtime-revolution.com/value-objects-in-ruby-on-rails-9df64bc8db34. But one must be careful with HOW MUCH behaviour gets attached to the Value Object, otherwise is it a Value anymore?
         2. https://medium.com/@dannysmith/little-thing-value-objects-in-ruby-c4745aeb9c07
         3. 
