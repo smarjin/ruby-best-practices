@@ -1,7 +1,6 @@
----
 ## Ruby. Best Practices.
----
-#### 1. Style
+
+### 1. Style
 The purpose of this guide is not to teach how to program or design patterns per se, but rather serve as a reference [or a reminder] that most of the times when the design of an app, or a specific flow of that app gets clunky, it is a sign that something might not be quite right or that something could be improved. Obviously, even the most ideal app that reflects "a real business" can get more complex over time and some things are just the way they are. But developers must ensure that they do a good breakdown of the domain knowledge they possess and the acquired techniques.
 
 While design patterns are [_mostly_] language agnostic concepts, the dynamic programming languages are the ones where things get more difficult to follow when the app grows. And that is a natural thing when there are no static types in place. This suggests that something else should be considered, or something that already exists has to be improved. Perhaps even consider it [the dynamic programming language] as a particular case when it comes to best practices? Because as the code grows, it gets harder to see what a certain entity is and how did it end up at a certain place. Is it something provided through the dependecy injection mechanism? Or is it an attribute? Or maybe a method that evaluates something and caches it? Do we need some meaningful _symbols_, prefixes or suffixes to better reflect what is what? When the class under investigation has around 200 lines it can get harder to find out. When there is a mesh of objects interactions with their blueprints defined in different classes [or, files per se] and the programmer has to navigate through all of them, to make sense of what certain _variables_ are meant to be, it can get very annoying and tedious.
@@ -15,7 +14,7 @@ The so called "_abuse_" of separate entities that encapsulate single responsibil
 
 In the end, this is a part of the software engineer's job, to analyze, write and _read_ code. The question is: _how can this process be improved?_
 
-#### 2. Design Patterns
+### 2. Design Patterns
 One of the most powerful tools are Design Patterns. When used right...
 
 It is beyond the scope of this guide to make a voyage through the entire galaxy of design patterns and talk about their mise-en-scenes. 
