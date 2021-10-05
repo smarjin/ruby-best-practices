@@ -1,6 +1,26 @@
+---
 ## Ruby. Best Practices.
+---
+#### 1. Style
+The purpose of this guide is not to teach how to program or design patterns per se, but rather serve as a reference [or a reminder] that most of the times when the design of an app, or a specific flow of that app gets clunky, it is a sign that something might not be quite right or that something could be improved. Obviously, even the most ideal app that reflects "a real business" can get more complex over time and some things are just the way they are. But developers must ensure that they do a good breakdown of the domain knowledge they possess and the acquired techniques.
 
-1. Design Patterns
+While design patterns are [_mostly_] language agnostic concepts, the dynamic programming languages are the ones where things get more difficult to follow when the app grows. And that is a natural thing when there are no static types in place. This suggests that something else should be considered, or something that already exists has to be improved. Perhaps even consider it [the dynamic programming language] as a particular case when it comes to best practices? Because as the code grows, it gets harder to see what a certain entity is and how did it end up at a certain place. Is it something provided through the dependecy injection mechanism? Or is it an attribute? Or maybe a method that evaluates something and caches it? Do we need some meaningful _symbols_, prefixes or suffixes to better reflect what is what? When the class under investigation has around 200 lines it can get harder to find out. When there is a mesh of objects interactions with their blueprints defined in different classes [or, files per se] and the programmer has to navigate through all of them, to make sense of what certain _variables_ are meant to be, it can get very annoying and tedious.
+
+Very often, the SOLID principles are employed and correctly, hence this concept is not disregarded. But the _single responsibility_ principle, for example, can easily become your enemy in a big code base when there is an _abuse_ of files [aka classes], or even method calls within the same class. Why? Again, because of attention span and knowing exactly "_what is what?_". This might not be a problem for the interpreter, but it is for us,  those who write and read. This can only happen when there is no:
+1. systematic way for _denominalization of things_ (a workaround for the lack of static types);
+2. tools to check the types (e.g: sorbet, rbs, etc.);
+3. static typing mimicking tool or approach (e.g: method always returns the same type)
+
+The so called "_abuse_" of separate entities that encapsulate single responsibilities pops up when there is a huge pool of these entities. Imagine having a large flow or a complex feature in a web app, that will inevitably lead to a lot of classes, hence instances. All those classes encapsulate certain behavior and responsibilities. If this feature is written in such a way that it only follows the SOLID principles then the prognosis of failure is not even required as failure becomes religion. There will be a huge web of objects sending messages to each other and navigating through that _naive infrastructure_ will be the programmer's quest. How productive is this?
+
+In the end, this is a part of the software engineer's job, to analyze, write and _read_ code. The question is: _how can this process be improved?_
+
+#### 2. Design Patterns
+One of the most powerful tools are Design Patterns. When used right...
+
+It is beyond the scope of this guide to make a voyage through the entire galaxy of design patterns and talk about their mise-en-scenes. 
+
+###### The Facade and Mediator patterns
     1. Combine The Facade and The mediator design patterns (keep the design as flat as possible)
         1. https://en.wikipedia.org/wiki/Facade_pattern
         2. https://en.wikipedia.org/wiki/Mediator_pattern
